@@ -1,0 +1,26 @@
+.exam-item {
+  padding: 2rem 0;
+}
+
+.exam-item:hover {
+  background: rgb( 47, 84, 235 );
+  color: rgb(255, 255, 255);
+}
+
+#header-ui a:hover {
+  border-top: 2px solid rgb( 47, 84, 235 );
+  color: rgb(255, 255, 255);
+}
+
+#header-ui .active {
+  border-top: 2px solid rgb( 47, 84, 235 );
+  color: rgb(255, 255, 255);
+}
+
+/* 移动端也不需要hover效果呀 */
+.imgWrap:hover {
+  transform: scale(1.05);
+}
+
+
+

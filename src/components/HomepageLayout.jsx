@@ -8,10 +8,10 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 
-import { BaseMenu, MobileMenu } from './BaseMenu'
-import HomepageHeading from './HomepageHeading'
-import BaseFooter from './BaseFooter'
-import BaseContent from './BaseContent'
+import { BaseMenu, MobileMenu } from './BaseMenu.jsx'
+import HomepageHeading from './HomepageHeading.jsx'
+import BaseFooter from './BaseFooter.jsx'
+import BaseContent from './BaseContent.jsx'
 
 class DesktopContainer extends Component {
   state = {}
@@ -60,6 +60,7 @@ class MobileContainer extends Component {
 
     return (
       <Responsive {...Responsive.onlyMobile}>
+      {console.log(Responsive.onlyMobile.maxWidth)}
         <Sidebar.Pushable>
           <Sidebar as={Menu} animation='uncover' inverted vertical visible={sidebarOpened}>
             <Menu.Item as='a' active>Home</Menu.Item>
@@ -100,9 +101,9 @@ ResponsiveContainer.propTypes = {
 }
 
 const HomepageLayout = () => (
-  <ResponsiveContainer>
+  <React.Fragment>
     <BaseContent />
     <BaseFooter />
-  </ResponsiveContainer>
+  </React.Fragment>
 )
 export default HomepageLayout
