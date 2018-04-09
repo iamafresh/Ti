@@ -16,23 +16,6 @@ class BaseMenu extends React.Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-  componentDidMount () {
-    let eleServe = document.getElementById('serve')
-    let eleWiki = document.getElementById('wiki')
-    let eleAbout = document.getElementById('about')
-    let el = document.getElementById('test')
-    console.log(el.offsetTop)
-
-    window.addEventListener('scroll', function () {
-      if (window.scrollY - el.offsetTop > 0) {
-      }
-    })
-  }
-
-  componentWillUnmount () {
-
-  }
-
   handleClick (e) {
     // 这种方式不可取
     // const name = e.target.classList.add('active')

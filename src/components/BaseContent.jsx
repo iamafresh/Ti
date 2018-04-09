@@ -124,28 +124,24 @@ class BaseContent extends React.Component {
                         <A
                           data-selectedtab='home'
                           className={classNames({'active': this.state.selected === 'home'})}
-                          href='#serve'
-                        >
-                            首页</A>
+                          href='index.html'
+                        >首页</A>
                       </Li>
                       <Li>
                         <A
                           data-selectedtab='serve'
                           className={classNames({'active': this.state.selected === 'serve'})}
-                          href='#serve'
+                          href='index.html#serve'
                           name='serve'
-                        >
-                            服务说明</A>
+                        >服务说明</A>
                       </Li>
 
                       <Li>
                         <A
                           data-selectedtab='about'
                           className={classNames({'active': this.state.selected === 'about'})}
-                          href='#about'
-                          name='about'
-                        >
-                            关于我们</A>
+                          href='about.html'
+                        >关于我们</A>
                       </Li>
                     </ul>
                   </Li>
@@ -156,7 +152,7 @@ class BaseContent extends React.Component {
           </Grid.Row>
         </Grid>
 
-        <a id='serve' name='serve' />
+        <a id='serve' name='serve'>''</a>
         <div style={{ padding: '4em 1em' }}>
           <div style={{textAlign: 'center'}}>
             <HeaderTitle>快速上链</HeaderTitle>
@@ -347,7 +343,6 @@ class BaseContent extends React.Component {
             </Grid.Column>
           </Grid>
 
-          <a id='about' name='about' />
           <Grid columns={1}>
             <Grid.Column style={{ background: `url(${consulteBg})`, padding: '4rem 0' }}>
               <Header as='h2' textAlign='center' style={{color: 'rgb(255,255,255)'}}>快速上链，实现弯道超车</Header>
