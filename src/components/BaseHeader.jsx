@@ -51,8 +51,8 @@ class BaseHeader extends React.Component {
               <Ul>
                 <Li style={{width: '30%'}}>
                   <A style={{fontSize: '1.5rem', color: 'rgb(255,255,255)'}}>
-                          趣块&nbsp;&nbsp;<Responsive as='span' minWidth={1120} style={{fontSize: '1rem', color: 'rgba(255,255,255,0.651)', borderTop: 0}}>
-                            |&nbsp;&nbsp; 全国首家区块链全栈技术服务上</Responsive>
+                          泰链&nbsp;&nbsp;<Responsive as='span' minWidth={1120} style={{fontSize: '1rem', color: 'rgba(255,255,255,0.651)', borderTop: 0}}>
+                            |&nbsp;&nbsp; 区块链技术落地服务商</Responsive>
                   </A>
                 </Li>
                 <Li style={{width: '70%'}}>

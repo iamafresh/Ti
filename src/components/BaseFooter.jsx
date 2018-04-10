@@ -13,7 +13,7 @@ const BaseFooter = () => (
       <Grid divided inverted stackable>
         <Grid.Row>
           <Grid.Column width={5}>
-            <Header inverted as='h4' content='快链' />
+            <Header inverted as='h4' content='泰链' />
             <List link inverted>
               <List.Item as='a'>区块链技术落地服务商</List.Item>
             </List>
