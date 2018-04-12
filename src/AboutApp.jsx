@@ -1,6 +1,7 @@
 import React from 'react'
-import 'semantic-ui-css/semantic.min.css'
 import styled from 'styled-components'
+import 'semantic-ui-css/semantic.min.css'
+import 'normalize.css'
 import BaseFooter from './components/BaseFooter.jsx'
 import BaseHeader from './components/BaseHeader.jsx'
 
@@ -19,8 +20,10 @@ class AboutApp extends React.Component {
   render () {
     return (
       <div>
-        <BaseHeader />
-        <div style={{width: '80%', margin: '0 auto', padding: '1rem'}}>
+        <div style={{position: 'static', left: 0, top: 0, width: '100%', backgroundColor: 'black', zIndex: 1000}}>
+          <BaseHeader />
+        </div>
+        <div style={{width: '90%', margin: '0 auto', padding: '2rem'}}>
           <p>您的位置&nbsp;&nbsp;首页>关于我们</p>
           <Title>公司简介</Title>
           <SubContent>泰链科技是一家专业提供区块链技术落地服务的开发型机构。
@@ -32,7 +35,7 @@ class AboutApp extends React.Component {
             流程简单化，而“极致”是让产品的用户体验和产品服务超越用户的预期</SubContent>
         </div>
         <div style={{backgroundColor: 'rgb( 237, 237, 237 )'}}>
-          <div style={{width: '80%', margin: '0 auto', padding: '1rem'}}>
+          <div style={{width: '90%', margin: '0 auto', padding: '1rem'}}>
             <Title>企业文化</Title>
             <SubContent>专注研发、不断创新、用心服务</SubContent>
             <SubContent>以用户为中心，简约而极致。“简约”追求的是产品外观简洁化，

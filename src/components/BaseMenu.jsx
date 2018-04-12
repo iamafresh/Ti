@@ -1,90 +1,133 @@
 import React from 'react'
+import styled from 'styled-components'
 import classNames from 'classnames'
 import {
+  Responsive,
   Menu,
-  Container,
-  Button,
   Icon
 } from 'semantic-ui-react'
+
+const Ul = styled.ul`
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+`
+const Li = styled.li`
+  display: inline-block;
+  height: 4rem;
+  line-height: 2rem;
+  width: 33.3%;
+  text-align: left;
+  vertical-align: middle;
+`
+
+const A = styled.a`
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 2px solid transparent;
+`
 
 class BaseMenu extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      name: 'home'
+      show: false,
+      selectedItem: 'home'
     }
     this.handleClick = this.handleClick.bind(this)
+    this.toggleMenu = this.toggleMenu.bind(this)
   }
 
   handleClick (e) {
-    // 这种方式不可取
-    // const name = e.target.classList.add('active')
-    const name = e.target.getAttribute('data-name')
-    this.setState({ name })
+    this.setState({
+      selectedItem: e.target.getAttribute('name')
+    })
+  }
+
+  toggleMenu () {
+    this.setState({
+      show: !this.state.show
+    })
   }
 
   render () {
-    const fixed = this.props.fixed
+    const { selectedItem } = this.state
 
     return (
-      <Menu
-        fixed={fixed ? 'top' : null}
-        inverted={!fixed}
-        pointing={!fixed}
-        secondary={!fixed}
-        size='large'
-      >
-        <Container onClick={this.handleClick}>
-          <Menu.Item
-            as='a'
-            data-name='home'
-            className={classNames({active: this.state.name === 'home'})}
-          >首页</Menu.Item>
-          <Menu.Item
-            as='a'
-            data-name='serve'
-            className={classNames({active: this.state.name === 'serve'})}
-            href='#serve'
-            name='serve'
-          >服务说明</Menu.Item>
-          <Menu.Item
-            as='a'
-            data-name='wiki'
-            href='#wiki'
-            name='wiki'
-            className={classNames({active: this.state.name === 'wiki'})}
-          >区块链百科</Menu.Item>
-          <Menu.Item
-            as='a'
-            data-name='about'
-            href='#about'
-            name='about'
-            className={classNames({active: this.state.name === 'about'})}
-          >关于我们</Menu.Item>
-          <Menu.Item position='right'>
-            <Button as='a' inverted={!fixed}>Log in</Button>
-            <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-          </Menu.Item>
-        </Container>
-      </Menu>
+      <Ul>
+        <Li style={{width: '30%'}}>
+          <A style={{fontSize: '1.5rem', color: 'rgb(255,255,255)'}}>
+            泰链Tic&nbsp;&nbsp;
+            <Responsive as='span' minWidth={1120} style={{fontSize: '1rem', color: 'rgba(255,255,255,0.651)', borderTop: 0}}>
+            |&nbsp;&nbsp; 区块链技术落地服务商</Responsive>
+          </A>
+        </Li>
+        <Li style={{width: '70%'}}>
+          <Responsive maxWidth={640} style={{position: 'relative', textAlign: 'right'}}>
+            <Icon name='sidebar' size='big' color='blue' onClick={this.toggleMenu} />
+            { this.state.show
+              ? <Menu
+                pointing
+                vertical
+                style={{position: 'absolute', top: '1rem', right: '-1rem', width: '7rem', zIndex: 9999}}
+                onClick={this.toggleMenu}>
+                <Menu.Item
+                  as='a'
+                  name='home'
+                  active={selectedItem === 'home'}
+                  content='首页'
+                  href='index.html'
+                  onClick={this.handleClick}
+                />
+                <Menu.Item
+                  as='a'
+                  name='serve'
+                  active={selectedItem === 'serve'}
+                  content='服务我们'
+                  href='index.html#serve'
+                  onClick={this.handleClick}
+                />
+                <Menu.Item
+                  as='a'
+                  name='about'
+                  active={selectedItem === 'about'}
+                  content='关于我们'
+                  href='about.html'
+                  onClick={this.handleClick}
+                />
+              </Menu> : null }
+          </Responsive>
+          <Responsive minWidth={640}>
+            <ul id='header-ui' style={{listStyle: 'none'}} onClick={this.handleClick}>
+              <Li>
+                <A
+                  name='home'
+                  className={classNames({'active': selectedItem === 'home'})}
+                  href='index.html'
+                >首页</A>
+              </Li>
+              <Li>
+                <A
+                  name='serve'
+                  className={classNames({'active': selectedItem === 'serve'})}
+                  href='index.html#serve'
+                >服务说明</A>
+              </Li>
+
+              <Li>
+                <A
+                  name='about'
+                  className={classNames({'active': selectedItem === 'about'})}
+                  href='about.html'
+                >关于我们</A>
+              </Li>
+            </ul>
+          </Responsive>
+        </Li>
+      </Ul>
     )
   }
 }
 
-const MobileMenu = props => {
-  return (
-    <Container>
-      <Menu inverted pointing secondary size='large'>
-        <Menu.Item onClick={props.handleToggle}>
-          <Icon name='sidebar' />
-        </Menu.Item>
-        <Menu.Item position='right'>
-          <Button as='a' inverted>Log in</Button>
-          <Button as='a' inverted style={{ marginLeft: '0.5em' }}>Sign Up</Button>
-        </Menu.Item>
-      </Menu>
-    </Container>
-  )
-}
-
-export { BaseMenu, MobileMenu }
+export default BaseMenu
