@@ -9,12 +9,12 @@ import aboutBg from '../assert/img/aboutBg.png'
 class BaseHeader extends React.Component {
   render () {
     return (
-      <Grid columns={1} style={{marginTop: 0}}>
+      <Grid columns={1} style={{width: '100%', margin: 0}}>
         <Grid.Row style={{padding: 0}}>
           <Grid.Column style={{position: 'relative', padding: 0}}>
             <BaseMenu />
             <div style={{backgroundColor: 'rgb( 237, 237, 237 )', overflow: 'hidden'}}>
-              <Image src={aboutBg} style={{maxWidth: '100%', float: 'right'}} />
+              <Image src={aboutBg} style={{maxWidth: '90%', float: 'right'}} />
             </div>
           </Grid.Column>
         </Grid.Row>

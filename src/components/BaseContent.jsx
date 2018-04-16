@@ -35,7 +35,8 @@ import './baseContent.css'
 import headerBg from '../assert/img/headerBg.jpg'
 
 const Wrapper = styled.div`
-  padding: 3rem 0;
+  padding: 3rem 0 0 0;
+  overflow: hidden;
 `
 const HeaderTitle = styled.h1`
   display: inline-block;
@@ -108,7 +109,7 @@ class BaseContent extends React.Component {
           <div style={{textAlign: 'center'}}>
             <HeaderTitle>快速上链</HeaderTitle>
           </div>
-          <Grid doubling columns={3} style={{maxWidth: '900px', margin: 'auto', marginTop: '2rem'}}>
+          <Grid stackable columns={3} style={{maxWidth: '900px', margin: 'auto', marginTop: '2rem'}}>
             <Grid.Column
               textAlign='center'
               style={{padding: '.4rem'}}
@@ -269,8 +270,7 @@ class BaseContent extends React.Component {
             >
               <div className='imgWrap' style={{boxShadow: '0 0 10px 0.2rem rgba(0,123,255,.25)', padding: '2rem', textAlign: 'center'}} >
                 <Image size='small' src={platform} style={{display: 'inline-block'}} />
-                <SubTitle textAlign='center'>全球数字化资产交易平台</SubTitle>
-                <SubContent textAlign='left'>链的类型：公链</SubContent>
+                <SubTitle textAlign='center'>公链</SubTitle>
                 <SubContent textAlign='left'>功能包括：账号管理、身份认证、宝贝上传、发行TOKEN、交易TOKEN、
                   用户管理、渠道管理、区块管理、合约管理、数据分析、系统设置</SubContent>
               </div>
@@ -278,10 +278,9 @@ class BaseContent extends React.Component {
             <Grid.Column style={{padding: '10px'}}>
               <div className='imgWrap' style={{boxShadow: '0 0 10px 0.2rem rgba(0,123,255,.25)', padding: '2rem', textAlign: 'center'}}>
                 <Image size='small' src={unionChain} style={{display: 'inline-block'}} />
-                <SubTitle textAlign='center'>全球中医联盟链</SubTitle>
-                <SubContent textAlign='left'>链的类型：联盟链</SubContent>
+                <SubTitle textAlign='center'>联盟链</SubTitle>
                 <SubContent textAlign='left'>功能包括：账号管理、身份认证、医生管理、发行TOKEN、交易TOKEN、
-                  区块管理、合约管理、据分析、系统设置</SubContent>
+                  区块管理、合约管理、据分析、系统设置<span style={{visibility: 'hidden'}}>、据分析、系统设置test</span></SubContent>
               </div>
             </Grid.Column>
             <Grid.Column
@@ -289,16 +288,16 @@ class BaseContent extends React.Component {
             >
               <div className='imgWrap' style={{boxShadow: '0 0 10px 0.2rem rgba(0,123,255,.25)', padding: '2rem', textAlign: 'center'}}>
                 <Image size='small' src={global} style={{display: 'inline-block'}} />
-                <SubTitle textAlign='center'>泰链科技公司链</SubTitle>
-                <SubContent textAlign='left'>链的类型： 私链</SubContent>
+                <SubTitle textAlign='center'>私链</SubTitle>
                 <SubContent textAlign='left'>功能包括：账号管理、发行TOKEN、区块管理、数据分析、系统设置
+                  <span style={{visibility: 'hidden'}}>区块管理、合约管理、据分析、系统设置、据分析、系统设置testtest</span>
                 </SubContent>
               </div>
             </Grid.Column>
           </Grid>
 
           <Grid columns={1} style={{margin: 0}}>
-            <Grid.Column style={{ background: `url(${consulteBg})`, padding: '4rem 0' }}>
+            <Grid.Column style={{ background: `url(${consulteBg})`, padding: '4rem 0', backgroundSize: '100% 100%' }}>
               <Header as='h2' textAlign='center' style={{color: 'rgb(255,255,255)'}}>快速上链，实现弯道超车</Header>
               <div style={{textAlign: 'center'}}>
                 <Button as='a' inverted>立即咨询</Button>

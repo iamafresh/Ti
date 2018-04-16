@@ -20,7 +20,7 @@ class AboutApp extends React.Component {
   render () {
     return (
       <div>
-        <div style={{position: 'static', left: 0, top: 0, width: '100%', backgroundColor: 'black', zIndex: 1000}}>
+        <div style={{position: 'static', left: 0, top: 0, width: '100%', backgroundColor: 'black', zIndex: 1000, boxSizing: 'border-box'}}>
           <BaseHeader />
         </div>
         <div style={{width: '90%', margin: '0 auto', padding: '2rem'}}>

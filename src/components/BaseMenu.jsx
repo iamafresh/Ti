@@ -8,16 +8,18 @@ import {
 } from 'semantic-ui-react'
 
 const Ul = styled.ul`
+  box-sizing: border-box;
   list-style: none;
   width: 80%;
   margin: 0 auto;
+  padding: 0;
 `
 const Li = styled.li`
   display: inline-block;
   height: 4rem;
   line-height: 2rem;
   width: 33.3%;
-  text-align: left;
+  text-align: right;
   vertical-align: middle;
 `
 
@@ -65,12 +67,12 @@ class BaseMenu extends React.Component {
         </Li>
         <Li style={{width: '70%'}}>
           <Responsive maxWidth={640} style={{position: 'relative', textAlign: 'right'}}>
-            <Icon name='sidebar' size='big' color='blue' onClick={this.toggleMenu} />
+            <Icon name='sidebar' size='big' color='blue' onClick={this.toggleMenu} style={{paddingTop: '.9rem'}} />
             { this.state.show
               ? <Menu
                 pointing
                 vertical
-                style={{position: 'absolute', top: '1rem', right: '-1rem', width: '7rem', zIndex: 9999}}
+                style={{position: 'absolute', top: '2rem', right: '-2rem', width: '7rem', zIndex: 9999}}
                 onClick={this.toggleMenu}>
                 <Menu.Item
                   as='a'
