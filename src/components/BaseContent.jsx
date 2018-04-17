@@ -188,8 +188,8 @@ class BaseContent extends React.Component {
                 <ImgWrapper>
                   <Image size='tiny' src={identify} style={{display: 'inline-block'}} />
                   <Header as='h3' textAlign='center'>数字身份</Header>
-                  <P>通过区块链技术打造用户数字身份作为数字通信证</P>
-                </ImgWrapper>
+                  <P>通过区块链技术打造用户数字身份作为数字通行证</P>
+                </ImgWrapper>·
               </Grid.Column>
               <Grid.Column style={{ padding: '1em', boxSizing: 'border-box' }}>
                 <ImgWrapper>
@@ -280,7 +280,7 @@ class BaseContent extends React.Component {
                 <Image size='small' src={unionChain} style={{display: 'inline-block'}} />
                 <SubTitle textAlign='center'>联盟链</SubTitle>
                 <SubContent textAlign='left'>功能包括：账号管理、身份认证、医生管理、发行TOKEN、交易TOKEN、
-                  区块管理、合约管理、据分析、系统设置<span style={{visibility: 'hidden'}}>、据分析、系统设置test</span></SubContent>
+                  区块管理、合约管理、数据分析、系统设置<span style={{visibility: 'hidden'}}>、据分析、系统设置test</span></SubContent>
               </div>
             </Grid.Column>
             <Grid.Column
@@ -300,7 +300,7 @@ class BaseContent extends React.Component {
             <Grid.Column style={{ background: `url(${consulteBg})`, padding: '4rem 0', backgroundSize: '100% 100%' }}>
               <Header as='h2' textAlign='center' style={{color: 'rgb(255,255,255)'}}>快速上链，实现弯道超车</Header>
               <div style={{textAlign: 'center'}}>
-                <Button as='a' target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes' inverted>立即咨询</Button>
+                <Button as='a' target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=1446115695&site=qq&menu=yes' inverted>立即咨询</Button>
               </div>
             </Grid.Column>
           </Grid>
