@@ -300,7 +300,7 @@ class BaseContent extends React.Component {
             <Grid.Column style={{ background: `url(${consulteBg})`, padding: '4rem 0', backgroundSize: '100% 100%' }}>
               <Header as='h2' textAlign='center' style={{color: 'rgb(255,255,255)'}}>快速上链，实现弯道超车</Header>
               <div style={{textAlign: 'center'}}>
-                <Button as='a' inverted>立即咨询</Button>
+                <Button as='a' target='_blank' href='http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes' inverted>立即咨询</Button>
               </div>
             </Grid.Column>
           </Grid>
