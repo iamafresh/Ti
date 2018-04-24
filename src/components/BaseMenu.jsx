@@ -86,7 +86,7 @@ class BaseMenu extends React.Component {
                   as='a'
                   name='serve'
                   active={selectedItem === 'serve'}
-                  content='服务我们'
+                  content='服务说明'
                   href='index.html#serve'
                   onClick={this.handleClick}
                 />

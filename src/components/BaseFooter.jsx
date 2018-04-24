@@ -45,10 +45,9 @@ const BaseFooter = () => (
       background: '#1b1c1d',
       borderTop: '1px solid #333'
     }}>
-      <p style={{ width: '80%', textAlign: 'center', color: 'rgba(255,255,255,.5)'}}>Copyright&nbsp;@&nbsp;2018&nbsp;福建省泰链科技有限公司&nbsp;闽ICP备16016214号-1</p>
+      <p style={{ width: '80%', textAlign: 'center', color: 'rgba(255,255,255,.5)'}}>Copyright&nbsp;@&nbsp;2018&nbsp;厦门泰链科技有限公司&nbsp;闽ICP备16016214号-1</p>
     </div>
   </div>
-
 )
 
 export default BaseFooter
