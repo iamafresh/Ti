@@ -1,3 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
 /*移动端适配 */
 html{font-size:10px}
 @media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
